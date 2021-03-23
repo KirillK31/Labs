@@ -1,16 +1,17 @@
 <?php
 
-use KirillK\A;
-use KirillK\B;
+use KirillK\Square;
+include 'KirillK\Line.php';
+include 'core\EquationInterface.php';
+include 'KirillK/Square.php';
 
-include 'KirillK/A.php';
-include 'KirillK/B.php';
+$sqr = new Square();
+$res = $sqr->solve(1, 4, 4);
 
-$obj = new A ();
-$obj2 = new B ();
-$res = $obj2->roots(1, 5, 0);
-
-echo($obj->func(6, 3) . PHP_EOL);
-foreach ($res as $el) {
-    echo $el;
+if ($res == null) {
+    echo "The equation does not have roots";
+} else {
+    foreach ($res as $el) {
+        echo $el;
+    }
 }
