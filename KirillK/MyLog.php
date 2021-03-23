@@ -5,13 +5,13 @@ namespace KirillK;
 use core\LogAbstract;
 use core\LogInterface;
 
+
 class MyLog extends LogAbstract implements LogInterface
 {
-
     public function _write()
     {
         foreach ($this->log as $mass) {
-            echo $mass . PHP_EOL;
+            echo $mass;
         }
     }
 
