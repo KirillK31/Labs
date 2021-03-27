@@ -8,8 +8,10 @@ include 'KirillK\Line.php';
 include 'KirillK\Square.php';
 include 'KirillK\KirillExeption.php';
 
+MyLog::log("Program version: " . trim(file_get_contents("version")));
 
 try {
+    echo "Enter 3 parameters: " . PHP_EOL;
 $a = readline();
 $b = readline();
 $c = readline();
